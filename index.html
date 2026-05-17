@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGCSE English Listening Exam - 0510/22</title>
+    <title>IGCSE English Listening Exam - 0510/23</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -48,24 +48,24 @@
 
         <div class="bg-blue-50 rounded-xl p-8 mb-8 border border-blue-100">
             <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <i class="fas fa-info-circle text-blue-600"></i> Exam Instructions (Paper 22)
+                <i class="fas fa-info-circle text-blue-600"></i> Exam Instructions
             </h2>
             <ul class="space-y-4 text-gray-700 font-medium">
                 <li class="flex gap-3">
-                    <i class="fas fa-desktop mt-1 text-blue-500"></i>
-                    <span>You must have a computer or a tablet to do this exam. It doesn’t fit the mobile screen.</span>
+                    <i class="fas fa-desktop mt-1 text-blue-500 flex-shrink-0"></i>
+                    <span><strong>Device Requirement:</strong> This exam must be taken on a computer or tablet; the interface is not compatible with mobile devices.</span>
                 </li>
                 <li class="flex gap-3">
-                    <i class="fas fa-expand mt-1 text-blue-500"></i>
-                    <span>Use the full screen button to do the exam in full screen.</span>
+                    <i class="fas fa-expand mt-1 text-blue-500 flex-shrink-0"></i>
+                    <span><strong>Display:</strong> Please utilize the Full Screen button to optimize your viewing area.</span>
                 </li>
                 <li class="flex gap-3">
-                    <i class="fas fa-volume-up mt-1 text-blue-500"></i>
-                    <span>Use the audio button to play the audio. Press on it again to pause the audio.</span>
+                    <i class="fas fa-volume-up mt-1 text-blue-500 flex-shrink-0"></i>
+                    <span><strong>Audio Controls:</strong> Select the Audio icon to begin playback. You may click it again at any time to pause.</span>
                 </li>
                 <li class="flex gap-3">
-                    <i class="fas fa-clock mt-1 text-blue-500"></i>
-                    <span>You have about 55 minutes to finish the exam.</span>
+                    <i class="fas fa-clock mt-1 text-blue-500 flex-shrink-0"></i>
+                    <span><strong>Time Limit:</strong> You have 55 minutes to complete the examination.</span>
                 </li>
             </ul>
         </div>
@@ -81,7 +81,7 @@
         <div class="flex flex-col">
             <div class="flex items-center gap-4">
                 <h1 class="text-xl font-bold text-red-600">IGCS Listening 0510 / 0511</h1>
-                <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium uppercase">0510/22 Oct/Nov 2024</span>
+                <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium uppercase">0510/23 Oct/Nov 2024</span>
             </div>
             <div class="text-blue-600 text-sm font-bold mt-1">Compiled by Amanullah Khan +966568959394</div>
         </div>
@@ -99,7 +99,7 @@
                     <div class="font-semibold text-blue-900">Exam Audio</div>
                     <div id="audio-status" class="text-xs text-blue-700">Click to Play</div>
                 </div>
-                <audio id="exam-audio" src="exam02.mp3"></audio>
+                <audio id="exam-audio" src="exam03.mp3"></audio>
             </div>
             <div class="text-right">
                 <div id="timer" class="text-xl font-mono font-bold text-gray-700">55:00</div>
@@ -134,7 +134,7 @@
                 <div class="bg-white rounded-xl shadow-lg border p-8">
                     <div class="border-b pb-6 mb-6">
                         <h2 class="text-2xl font-bold text-gray-900">Exam Performance Summary</h2>
-                        <p class="text-gray-500 text-sm">Cambridge IGCSE™ Listening 0510/22 • Oct/Nov 2024</p>
+                        <p class="text-gray-500 text-sm">Cambridge IGCSE™ Listening 0510/23 • Oct/Nov 2024</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -158,7 +158,7 @@
                             <div id="exercise-marks" class="space-y-4"></div>
                         </div>
                         <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
-                            <h3 class="font-bold text-yellow-800 text-sm uppercase mb-3 text-center">Grade Thresholds (C22)</h3>
+                            <h3 class="font-bold text-yellow-800 text-sm uppercase mb-3 text-center">Grade Thresholds (C23)</h3>
                             <div class="space-y-1 text-sm font-bold text-yellow-700">
                                 <div class="flex justify-between px-4"><span>Grade A:</span> <span>36+</span></div>
                                 <div class="flex justify-between px-4"><span>Grade B:</span> <span>33+</span></div>
@@ -171,9 +171,19 @@
                         </div>
                     </div>
 
-                    <div class="border-t pt-8 flex justify-center">
+                    <div class="border-t pt-8 flex justify-center gap-4">
                         <button onclick="location.reload()" class="bg-blue-600 text-white px-10 py-3 rounded-lg font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all">Retake Exam</button>
+                        <button id="review-btn" onclick="toggleDetailedReview()" class="bg-slate-800 text-white px-10 py-3 rounded-lg font-bold hover:bg-slate-700 shadow-lg shadow-slate-200 transition-all">Review Answers</button>
                     </div>
+
+                    <!-- Detailed Scrollable Review Section -->
+                    <div id="detailed-review-section" class="hidden mt-8 border-t pt-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Detailed Answer Review</h3>
+                        <div id="review-list" class="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                            <!-- Dynamically generated list of 40 questions -->
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </main>
@@ -205,83 +215,83 @@
     const examData = [
         // Exercise 1: Pictures (Q1-8)
         ...Array.from({length: 8}, (_, i) => ({ id: i + 1, ex: 1, text: [
-            "What did the boy do on the school science trip?", 
-            "Which activity is the girl looking forward to most?", 
-            "Where is the guide taking the tour group next?", 
-            "How did the girl find out about the concert?", 
-            "Where does the girl think her school folder is now?", 
-            "What does the park look like now?", 
-            "How do the two friends decide to get to the train station?", 
-            "Which design has been chosen for the new school logo?"
-        ][i], options: ["A", "B", "C", "D"], correct: ["B", "A", "D", "D", "C", "A", "B", "D"][i] })),
+            "Where are the friends going to spend their break?", 
+            "What did the boy enjoy the most during the trip?", 
+            "Which instrument is the girl going to play at the school concert?", 
+            "What time is the yoga class the man wants to take?", 
+            "Which item is on special offer at the shop?", 
+            "Where is the man hoping to stay on his holiday?", 
+            "How did the girl learn to draw?", 
+            "What is the homework for the following week?"
+        ][i], options: ["A", "B", "C", "D"], correct: ["B", "A", "D", "C", "B", "C", "D", "D"][i] })),
         
         // Exercise 2: Paired MCQ (Q9-18)
-        { id: 9, ex: 2, text: "Where is the new shop?", options: ["It's on a busy street.", "It's in a new building.", "It's at one end of a bridge."], correct: "C" },
-        { id: 10, ex: 2, text: "What does the boy say about the clothes in the shop?", options: ["There was a discount on some items.", "A new range of items was on display.", "Some items were unavailable."], correct: "C" },
-        { id: 11, ex: 2, text: "The party is to celebrate", options: ["his parents' wedding anniversary.", "his father's retirement.", "his mother's birthday."], correct: "A" },
-        { id: 12, ex: 2, text: "What is the man still worried about?", options: ["the number of guests", "the place he has booked", "the catering arrangements"], correct: "C" },
-        { id: 13, ex: 2, text: "What is the boy's main aim in going to university?", options: ["to gain independence", "to complete his education", "to enable him to get a good job"], correct: "C" },
-        { id: 14, ex: 2, text: "How do the friends both feel about moving away from home?", options: ["determined to learn new skills", "keen to get to know a new area", "excited about making new friends"], correct: "A" },
-        { id: 15, ex: 2, text: "Why does the teacher mention the school uniform to her students?", options: ["to remind them of the rules", "to inform them about a change", "to encourage them to complete a survey"], correct: "C" },
-        { id: 16, ex: 2, text: "What information does the teacher give about the writing competition?", options: ["when the deadline is", "what the prize will be", "who all the judges are"], correct: "B" },
-        { id: 17, ex: 2, text: "The man decided to sell his car because", options: ["he needed to save money.", "he realised he didn't need it anymore.", "he wanted to be more environmentally friendly."], correct: "B" },
-        { id: 18, ex: 2, text: "What does the woman say about her local car-sharing club?", options: ["Anyone is able to join.", "You need to plan ahead.", "Joining it was simple."], correct: "C" },
+        { id: 9, ex: 2, text: "How does the girl feel about the history project?", options: ["nervous", "optimistic", "excited"], correct: "B" },
+        { id: 10, ex: 2, text: "The boy has done some preparation using", options: ["borrowed notes.", "library resources.", "the internet."], correct: "C" },
+        { id: 11, ex: 2, text: "The boy suggests that the tennis coach was", options: ["relaxed.", "encouraging.", "demanding."], correct: "C" },
+        { id: 12, ex: 2, text: "The boy's friend can sign up for the tennis class by", options: ["calling the club.", "sending an email.", "completing a form."], correct: "A" },
+        { id: 13, ex: 2, text: "The guest was most unhappy about", options: ["the level of noise.", "the attitude of the staff.", "the quality of the food."], correct: "C" },
+        { id: 14, ex: 2, text: "Following her complaint, the guest received", options: ["a reduction in her bill.", "free entry to the spa.", "a special rate for the next visit."], correct: "A" },
+        { id: 15, ex: 2, text: "The speaker first learnt how to cook", options: ["from her friends.", "from her family.", "from online tutorials."], correct: "C" },
+        { id: 16, ex: 2, text: "The speaker says that she especially enjoys", options: ["cooking healthy food.", "inviting people for meals.", "being able to save money."], correct: "B" },
+        { id: 17, ex: 2, text: "The painting has been shown at the gallery", options: ["for about a week.", "for two months.", "for nearly two years."], correct: "A" },
+        { id: 18, ex: 2, text: "What is unusual about the painting?", options: ["the woman's emotion", "the woman's clothes", "the woman's hairstyle"], correct: "C" },
         
         // Exercise 3: Talk (Q19-26)
         ...Array.from({length: 8}, (_, i) => ({ id: i + 19, ex: 3, text: [
-            "The path is special because it", 
-            "It took ... days for the first person to complete the path.", 
-            "Freddy stayed in ... when he walked part of the path last summer.", 
-            "Freddy expected the path to be ... when he initially heard about it.", 
-            "Freddy felt ... after walking for a week.", 
-            "The most useful advice Freddy was given was about the", 
-            "Freddy used the Wales Coast Path app to", 
-            "Red signposts show"
+            "Nina says that barn owls often live", 
+            "Barn owls are often seen in areas covered in grass, as these provide", 
+            "Nina mentions that unlike other birds, barn owls can", 
+            "Barn owls typically lay their first eggs in", 
+            "Young owls typically spend ... with their mother.", 
+            "Nina was surprised to learn that ... are a threat to barn owls.", 
+            "The Owl Box Project", 
+            "Right now, the best way to help the Owl Box Project is by"
         ][i], options: [
-            ["goes all the way round the country.", "is the only long-distance track in the country.", "follows the country's entire shoreline."],
-            ["41", "71", "82"],
-            ["hotels", "campsites", "people's houses"],
-            ["flat", "straight", "narrow"],
-            ["proud", "inspired", "relieved"],
-            ["sea.", "cliffs.", "weather."],
-            ["identify wildlife he saw.", "learn about local history.", "record his daily progress."],
-            ["places that can be dangerous.", "alternative routes to follow.", "where the path is closed."]
-        ][i], correct: ["C", "A", "C", "A", "B", "A", "B", "B"][i] })),
+            ["in urban areas.", "in woods and fields.", "quite close to people."],
+            ["safety from other animals.", "a source of food.", "a quiet environment."],
+            ["fly silently.", "hear very well.", "see in the dark."],
+            ["March.", "April.", "May."],
+            ["between 8 and 20 days", "at least 30 days", "just over 8 weeks"],
+            ["bad weather conditions", "chemicals used in farming", "low levels of food supplies"],
+            ["supports owls in different ways.", "was set up by a group of farmers.", "is small and community-based."],
+            ["donating money.", "building nesting boxes.", "sharing information about their work."]
+        ][i], correct: ["C", "B", "A", "B", "C", "A", "A", "C"][i] })),
         
         // Exercise 4: Matching Statements (Q27-32)
-        ...Array.from({length: 6}, (_, i) => ({ id: i + 27, ex: 4, text: `Speaker ${i+1}`, options: ["A", "B", "C", "D", "E", "F", "G", "H"], correct: ["B", "D", "A", "F", "H", "E"][i] })),
+        ...Array.from({length: 6}, (_, i) => ({ id: i + 27, ex: 4, text: `Speaker ${i+1}`, options: ["A", "B", "C", "D", "E", "F", "G", "H"], correct: ["G", "C", "D", "H", "F", "E"][i] })),
         
-        // Exercise 5: Cake/Diving (Q33-40)
+        // Exercise 5: Juggling (Q33-40)
         ...Array.from({length: 8}, (_, i) => ({ id: i + 33, ex: 5, text: [
-            "What made Nadia decide to become a professional diver?", 
-            "When Nadia did her first dive in the sea, she was aware of", 
-            "Nadia avoided paying a lot for her first qualification by", 
-            "Nadia says that the hardest thing about becoming a 'dive master' was", 
-            "What does Nadia like most about taking someone on their first dive?", 
-            "What does Nadia say about the diving centre she runs now?", 
-            "At her diving centre, Nadia spends most of her time", 
-            "When asked about her most memorable dive, Nadia describes"
+            "How did Max learn how to juggle?", 
+            "Max gave his first juggling performance", 
+            "What did Max find most difficult about juggling in public for the first time?", 
+            "Max says that the main thing to remember when you learn how to juggle is", 
+            "What does Max say about choosing which items to juggle?", 
+            "What do Max's parents think about his job?", 
+            "In the future, Max is planning to", 
+            "Max doesn't want to try for the world record because"
         ][i], options: [
-            ["a TV documentary", "a letter from a relative", "an article in a magazine"],
-            ["the poor weather conditions.", "the number of people in the group.", "the weight of the equipment."],
-            ["borrowing some of the things that she needed.", "doing part-time work at the diving centre.", "choosing her course carefully."],
-            ["doing the required number of dives.", "completing the first-aid training.", "learning all the theory."],
-            ["listening to them talk about it later", "seeing the look on their face afterwards", "realising that they have gained confidence"],
-            ["She was given the opportunity to take it over.", "She set it up with a group of friends.", "She had known the owners for a long time."],
-            ["teaching.", "writing a blog.", "advertising the courses."],
-            ["an unusual location.", "an unexpected sight.", "an unfamiliar species."]
-        ][i], correct: ["A", "C", "B", "C", "B", "A", "B", "B"][i] }))
+            ["by watching TV", "from a family member", "by attending a class"],
+            ["thanks to being encouraged by a friend.", "to help out someone he knew.", "to show off his juggling skills."],
+            ["making the children laugh", "not dropping any of the items", "feeling comfortable with the audience"],
+            ["not to get discouraged.", "to try to concentrate.", "to practise as often as possible."],
+            ["The items should be large enough to be easily seen.", "Messy items should be avoided if possible.", "Lighter items work better than heavy ones."],
+            ["They wish it earned him more money.", "They'd prefer him to work locally.", "They've decided it would be better as a hobby."],
+            ["go back to university.", "perform on television.", "teach others how to juggle."],
+            ["he can't afford to pay for it.", "he isn't skilled enough.", "he doesn't enjoy competing."]
+        ][i], correct: ["A", "B", "C", "B", "A", "B", "C", "C"][i] }))
     ];
 
     const matchingOptions = { 
-        "A": "Being part of a team is what I particularly enjoy.", 
-        "B": "It's great when I realise that what I've done is appreciated.", 
-        "C": "It has helped me to decide what sort of career I'd like to do in the future.", 
-        "D": "I get more satisfaction from it than I do from my job.", 
-        "E": "It is a good way of getting work experience.", 
-        "F": "It has given me the chance to get to know new people.", 
-        "G": "I've got so much fitter since I started doing this.", 
-        "H": "I'm glad it allows me to spend more time outdoors." 
+        "A": "I think that the tickets were overpriced.", 
+        "B": "I was surprised by how much I enjoyed it.", 
+        "C": "Festivals are a great place to meet new people.", 
+        "D": "It can be hard work to organise a festival.", 
+        "E": "Visiting a festival made me start a new hobby.", 
+        "F": "I was a bit concerned about the safety at the event.", 
+        "G": "I don't enjoy festivals as much as I used to.", 
+        "H": "I was impressed by the skills shown at the event." 
     };
 
     let currentQuestionIndex = 0;
@@ -400,7 +410,7 @@
     const audioStatus = document.getElementById('audio-status');
     audioBtn.onclick = () => {
         if (examAudio.paused) {
-            examAudio.play().then(() => { audioStatus.textContent = 'Playing...'; }).catch(() => audioStatus.textContent = 'exam02.mp3 not found');
+            examAudio.play().then(() => { audioStatus.textContent = 'Playing...'; }).catch(() => audioStatus.textContent = 'exam03.mp3 not found');
         } else { examAudio.pause(); audioStatus.textContent = 'Paused'; }
     };
 
@@ -423,7 +433,7 @@
         if (score >= 36) return 'A';
         if (score >= 33) return 'B';
         if (score >= 30) return 'C';
-        if (score >= 27) return 'D'; // Threshold from C22 Table
+        if (score >= 27) return 'D'; // Threshold from C23 Table
         if (score >= 23) return 'E';
         if (score >= 20) return 'F';
         if (score >= 17) return 'G';
@@ -450,6 +460,80 @@
             const p = Math.round((exMarks[i]/exTotals[i])*100);
             breakdown.innerHTML += `<div><div class="flex justify-between text-xs font-bold mb-1"><span>Exercise ${i}</span><span>${exMarks[i]}/${exTotals[i]}</span></div>
                 <div class="w-full bg-gray-100 h-1.5 rounded-full"><div class="bg-blue-600 h-1.5 rounded-full" style="width:${p}%"></div></div></div>`;
+        }
+
+        renderDetailedReview();
+    }
+
+    function renderDetailedReview() {
+        const reviewContainer = document.getElementById('review-list');
+        reviewContainer.innerHTML = '';
+        
+        examData.forEach(q => {
+            const userAns = userAnswers[q.id] || null;
+            const isCorrect = userAns === q.correct;
+            
+            const item = document.createElement('div');
+            item.className = `p-4 rounded-lg border ${isCorrect ? 'border-green-200 bg-green-50/30' : 'border-red-200 bg-red-50/30'} flex flex-col gap-2`;
+            
+            let userAnsText = '';
+            let correctAnsText = '';
+            
+            if (q.ex === 1) {
+                userAnsText = userAns ? `Option ${userAns}` : 'Not Attempted';
+                correctAnsText = `Option ${q.correct}`;
+            } else if (q.ex === 4) {
+                userAnsText = userAns ? `${userAns}: ${matchingOptions[userAns]}` : 'Not Attempted';
+                correctAnsText = `${q.correct}: ${matchingOptions[q.correct]}`;
+            } else {
+                const alphabet = ['A', 'B', 'C', 'D'];
+                const correctIdx = alphabet.indexOf(q.correct);
+                correctAnsText = `${q.correct}: ${q.options[correctIdx] || q.correct}`;
+                
+                if (userAns) {
+                    const userIdx = alphabet.indexOf(userAns);
+                    userAnsText = `${userAns}: ${q.options[userIdx] || userAns}`;
+                } else {
+                    userAnsText = 'Not Attempted';
+                }
+            }
+
+            item.innerHTML = `
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="inline-block px-2 py-0.5 bg-gray-200 text-gray-700 text-xs font-bold rounded mb-1">Q${q.id} - Exercise ${q.ex}</span>
+                        <h4 class="font-bold text-gray-800">${q.text}</h4>
+                    </div>
+                    <div>
+                        ${isCorrect ? 
+                            '<span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full flex items-center gap-1"><i class="fas fa-check"></i> Correct</span>' : 
+                            '<span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-bold rounded-full flex items-center gap-1"><i class="fas fa-times"></i> Incorrect</span>'
+                        }
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2 text-sm">
+                    <div class="p-2 rounded ${isCorrect ? 'bg-green-100/50 text-green-900' : 'bg-red-100/50 text-red-900'}">
+                        <span class="font-bold">Your Answer:</span> ${userAnsText}
+                    </div>
+                    <div class="p-2 rounded bg-green-100 text-green-900">
+                        <span class="font-bold">Correct Answer:</span> ${correctAnsText}
+                    </div>
+                </div>
+            `;
+            reviewContainer.appendChild(item);
+        });
+    }
+
+    function toggleDetailedReview() {
+        const reviewSection = document.getElementById('detailed-review-section');
+        const reviewBtn = document.getElementById('review-btn');
+        if (reviewSection.classList.contains('hidden')) {
+            reviewSection.classList.remove('hidden');
+            reviewBtn.textContent = "Hide Review";
+            reviewSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            reviewSection.classList.add('hidden');
+            reviewBtn.textContent = "Review Answers";
         }
     }
 
