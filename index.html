@@ -68,85 +68,174 @@
     background: var(--bg);
     z-index: 200;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    align-items: stretch;
+    justify-content: stretch;
     overflow: hidden;
   }
 
-  .home-card {
-    background: var(--surface);
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    max-width: 540px;
+  .home-layout {
+    display: flex;
     width: 100%;
-    padding: 2rem 2.25rem 1.5rem;
-    animation: fadeUp 0.5s ease;
-    max-height: calc(100vh - 2rem);
+    height: 100%;
+  }
+
+  /* Left panel — branding/info */
+  .home-left {
+    width: 42%;
+    background: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-left::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .home-left::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .home-logo-mark {
+    width: 48px; height: 48px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .home-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.6rem;
+  }
+
+  .home-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .home-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2.5rem;
+  }
+
+  .home-info-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .home-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .home-info-icon {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .home-info-text strong { display: block; font-size: 12.5px; font-weight: 600; color: white; }
+  .home-info-text span { font-size: 12px; color: rgba(255,255,255,0.55); }
+
+  /* Right panel — form */
+  .home-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+    background: var(--bg);
     overflow-y: auto;
+  }
+
+  .home-form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .home-form-sub {
+    font-size: 13px;
+    color: var(--text-3);
+    margin-bottom: 2rem;
+  }
+
+  .form-field { margin-bottom: 1.1rem; }
+
+  .form-label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-3);
+    margin-bottom: 7px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--surface);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+  }
+
+  .form-error {
+    display: none;
+    color: var(--red);
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .home-attribution {
+    margin-top: 1.5rem;
+    font-size: 11.5px;
+    color: var(--text-3);
   }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
-  .home-badge {
-    display: inline-block;
-    background: var(--accent-light);
-    color: var(--accent);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 100px;
-    margin-bottom: 0.8rem;
-  }
-
-  .home-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    line-height: 1.15;
-    margin-bottom: 0.3rem;
-  }
-
-  .home-sub {
-    font-size: 13px;
-    color: var(--text-3);
-    margin-bottom: 1.25rem;
-  }
-
-  .instruction-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.25rem; }
-
-  .instruction-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    padding: 10px 14px;
-    background: var(--bg);
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-  }
-
-  .instruction-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--accent);
-    font-size: 14px;
-  }
-
-  .instruction-item strong { font-weight: 600; display: block; font-size: 12.5px; }
-  .instruction-item span { font-size: 12px; color: var(--text-2); }
 
   .start-btn {
     width: 100%;
@@ -949,59 +1038,78 @@
 
 <!-- HOME SCREEN -->
 <div id="home-screen">
-  <div class="home-card">
-    <div class="home-badge">Cambridge IGCSE™</div>
-    <h1 class="home-title">Cambridge IGCSE<br>Listening Exam</h1>
-    <p class="home-sub">0510 / 0511 · Oct/Nov 2024 · Paper 21</p>
+  <div class="home-layout">
 
-    <ul class="instruction-list">
-      <li class="instruction-item">
-        <div class="instruction-icon">⊞</div>
-        <div>
-          <strong>Device</strong>
-          <span>Use a computer or tablet. This interface is not optimised for mobile phones.</span>
-        </div>
-      </li>
-      <li class="instruction-item">
-        <div class="instruction-icon">⟳</div>
-        <div>
-          <strong>Audio</strong>
-          <span>Click the audio control in the header to play. You may pause at any time.</span>
-        </div>
-      </li>
-      <li class="instruction-item">
-        <div class="instruction-icon">◷</div>
-        <div>
-          <strong>Time Limit</strong>
-          <span>You have 55 minutes to complete all 40 questions across 5 exercises.</span>
-        </div>
-      </li>
-    </ul>
+    <!-- Left: Branding -->
+    <div class="home-left">
+      <div class="home-logo-mark">I</div>
+      <div class="home-eyebrow">Cambridge IGCSE™</div>
+      <h1 class="home-title">English as a<br>Second Language</h1>
+      <p class="home-sub">0510/21 · Paper 2 Listening · October/November 2024</p>
 
-    <div style="margin-bottom:1rem;">
-      <label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-3);margin-bottom:8px;">Full Name</label>
-      <input id="student-name-input" type="text" placeholder="Enter your full name…" autocomplete="name"
-        style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);background:var(--bg);outline:none;transition:border-color 0.2s;"
-        onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"
-        onkeydown="if(event.key==='Enter')document.getElementById('student-class-input').focus()">
-      <div id="name-error" style="display:none;color:var(--red);font-size:12px;margin-top:5px;">Please enter your full name to begin.</div>
+      <div class="home-info-list">
+        <div class="home-info-item">
+          <div class="home-info-icon">⊞</div>
+          <div class="home-info-text">
+            <strong>Device</strong>
+            <span>Use a computer or tablet. Not optimised for mobile phones.</span>
+          </div>
+        </div>
+        <div class="home-info-item">
+          <div class="home-info-icon">⟳</div>
+          <div class="home-info-text">
+            <strong>Audio</strong>
+            <span>Click the audio control in the header to play. You may pause at any time.</span>
+          </div>
+        </div>
+        <div class="home-info-item">
+          <div class="home-info-icon">◷</div>
+          <div class="home-info-text">
+            <strong>Time Limit</strong>
+            <span>You have 55 minutes to complete all 40 questions across 5 exercises.</span>
+          </div>
+        </div>
+        <div class="home-info-item">
+          <div class="home-info-icon">✎</div>
+          <div class="home-info-text">
+            <strong>40 Questions</strong>
+            <span>5 exercises — Pictures, Conversations, Talk, Matching, Interview.</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div style="margin-bottom:1rem;">
-      <label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-3);margin-bottom:8px;">Class / Grade</label>
-      <input id="student-class-input" type="text" placeholder="e.g. 10A, 11B…" autocomplete="off"
-        style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);background:var(--bg);outline:none;transition:border-color 0.2s;"
-        onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"
-        onkeydown="if(event.key==='Enter')startExam()">
-      <div id="class-error" style="display:none;color:var(--red);font-size:12px;margin-top:5px;">Please enter your class to begin.</div>
+    <!-- Right: Form -->
+    <div class="home-right">
+      <p class="home-form-title">Student Sign-In</p>
+      <p class="home-form-sub">Please enter your details to begin the examination.</p>
+
+      <div class="form-field">
+        <label class="form-label">Full Name</label>
+        <input id="student-name-input" type="text" class="form-input"
+          placeholder="Enter your full name…" autocomplete="name"
+          onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"
+          onkeydown="if(event.key==='Enter')document.getElementById('student-class-input').focus()">
+        <div id="name-error" class="form-error">Please enter your full name to begin.</div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label">Class / Grade</label>
+        <input id="student-class-input" type="text" class="form-input"
+          placeholder="e.g. 10A, 11B…" autocomplete="off"
+          onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"
+          onkeydown="if(event.key==='Enter')startExam()">
+        <div id="class-error" class="form-error">Please enter your class to begin.</div>
+      </div>
+
+      <button class="start-btn" onclick="startExam()">
+        Begin Examination
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <p class="home-attribution">Compiled by Amanullah Khan · +966 568 959 394</p>
     </div>
 
-    <button class="start-btn" onclick="startExam()">
-      Begin Examination
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-
-    <p class="attribution">Compiled by Amanullah Khan · +966 568 959 394</p>
   </div>
 </div>
 
@@ -1316,6 +1424,7 @@ function startExam() {
   currentIdx = 0;
   document.getElementById('home-screen').style.display = 'none';
   document.getElementById('app').classList.add('visible');
+  initAudio();
   buildNav();
   renderQ();
   startTimer();
@@ -1500,27 +1609,36 @@ function startTimer() {
 }
 
 /* ===== AUDIO ===== */
-const audio = document.getElementById('exam-audio');
-const audioPill = document.getElementById('audio-pill');
-const audioStatus = document.getElementById('audio-status');
+let audio, audioPill, audioStatus;
+
+function initAudio() {
+  audio = document.getElementById('exam-audio');
+  audioPill = document.getElementById('audio-pill');
+  audioStatus = document.getElementById('audio-status');
+  if (audio) {
+    audio.addEventListener('ended', () => {
+      audioPill.classList.remove('playing');
+      audioStatus.textContent = 'Finished';
+    });
+  }
+}
 
 function toggleAudio() {
+  if (!audio) return;
   if (audio.paused) {
     audio.play().then(() => {
       audioStatus.textContent = 'Now playing…';
       audioPill.classList.add('playing');
-    }).catch(() => { audioStatus.textContent = 'exam01.mp3 not found'; });
+    }).catch(err => {
+      audioStatus.textContent = 'exam01.mp3 not found';
+      console.error('Audio error:', err);
+    });
   } else {
     audio.pause();
     audioStatus.textContent = 'Paused';
     audioPill.classList.remove('playing');
   }
 }
-
-audio.addEventListener('ended', () => {
-  audioPill.classList.remove('playing');
-  audioStatus.textContent = 'Finished';
-});
 
 /* ===== FULLSCREEN ===== */
 function toggleFullscreen() {
