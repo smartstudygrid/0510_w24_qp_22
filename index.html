@@ -1424,7 +1424,6 @@ function startExam() {
   currentIdx = 0;
   document.getElementById('home-screen').style.display = 'none';
   document.getElementById('app').classList.add('visible');
-  initAudio();
   buildNav();
   renderQ();
   startTimer();
@@ -1609,36 +1608,27 @@ function startTimer() {
 }
 
 /* ===== AUDIO ===== */
-let audio, audioPill, audioStatus;
-
-function initAudio() {
-  audio = document.getElementById('exam-audio');
-  audioPill = document.getElementById('audio-pill');
-  audioStatus = document.getElementById('audio-status');
-  if (audio) {
-    audio.addEventListener('ended', () => {
-      audioPill.classList.remove('playing');
-      audioStatus.textContent = 'Finished';
-    });
-  }
-}
+const audio = document.getElementById('exam-audio');
+const audioPill = document.getElementById('audio-pill');
+const audioStatus = document.getElementById('audio-status');
 
 function toggleAudio() {
-  if (!audio) return;
   if (audio.paused) {
     audio.play().then(() => {
       audioStatus.textContent = 'Now playing…';
       audioPill.classList.add('playing');
-    }).catch(err => {
-      audioStatus.textContent = 'exam01.mp3 not found';
-      console.error('Audio error:', err);
-    });
+    }).catch(() => { audioStatus.textContent = 'exam01.mp3 not found'; });
   } else {
     audio.pause();
     audioStatus.textContent = 'Paused';
     audioPill.classList.remove('playing');
   }
 }
+
+audio.addEventListener('ended', () => {
+  audioPill.classList.remove('playing');
+  audioStatus.textContent = 'Finished';
+});
 
 /* ===== FULLSCREEN ===== */
 function toggleFullscreen() {
