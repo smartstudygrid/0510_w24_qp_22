@@ -1045,7 +1045,7 @@
       <div class="home-logo-mark">I</div>
       <div class="home-eyebrow">Cambridge IGCSE™</div>
       <h1 class="home-title">English as a<br>Second Language</h1>
-      <p class="home-sub">0510/21 · Paper 2 Listening · October/November 2024</p>
+      <p class="home-sub">0510/22 · Paper 2 Listening · October/November 2024</p>
 
       <div class="home-info-list">
         <div class="home-info-item">
@@ -1108,6 +1108,7 @@
       </button>
 
       <p class="home-attribution">Compiled by Amanullah Khan · +966 568 959 394</p>
+      <p class="home-attribution" style="margin-top:0.3rem;"><a href="https://smartstudygrid.com" target="_blank" rel="noopener" style="color:var(--text-3);text-decoration:underline;font-size:12px;opacity:0.8;">smartstudygrid.com</a></p>
     </div>
 
   </div>
@@ -1121,7 +1122,7 @@
       <div>
         <div class="header-title">IGCSE Listening 0510 / 0511</div>
       </div>
-      <div class="header-chip">0510/21 Oct/Nov 2024</div>
+      <div class="header-chip">0510/22 Oct/Nov 2024</div>
     </div>
 
     <div class="header-right">
@@ -1184,7 +1185,7 @@
         <div class="result-header">
           <div>
             <h2 id="result-student-name">Exam Complete</h2>
-            <p>Cambridge IGCSE™ English Listening 0510/21 · Oct/Nov 2024</p>
+            <p>Cambridge IGCSE™ English Listening 0510/22 · Oct/Nov 2024</p>
             <p id="result-datetime" style="font-size:12px;opacity:0.6;margin-top:3px;"></p>
           </div>
           <div class="grade-circle">
@@ -1266,122 +1267,123 @@
 <script>
 const examData = [
   // Exercise 1 — Eight short recordings, A/B/C/D image options
-  // Answers from mark scheme: 1C 2B 3A 4D 5D 6A 7B 8C
-  {id:1, ex:1, text:"What does the girl decide to eat?", options:["A","B","C","D"], correct:"C"},
-  {id:2, ex:1, text:"What has the boy forgotten?", options:["A","B","C","D"], correct:"B"},
-  {id:3, ex:1, text:"Where does the girl want to meet her friend?", options:["A","B","C","D"], correct:"A"},
-  {id:4, ex:1, text:"What was this week's nature programme on TV about?", options:["A","B","C","D"], correct:"D"},
-  {id:5, ex:1, text:"Which is the boy's favourite photo?", options:["A","B","C","D"], correct:"D"},
-  {id:6, ex:1, text:"Which sport has the girl given up most recently?", options:["A","B","C","D"], correct:"A"},
-  {id:7, ex:1, text:"What did the boy do yesterday morning?", options:["A","B","C","D"], correct:"B"},
-  {id:8, ex:1, text:"Who will the girl stay with during the holidays?", options:["A","B","C","D"], correct:"C"},
+  // Answers from mark scheme: 1B 2A 3D 4D 5C 6A 7B 8D
+  {id:1, ex:1, text:"What did the boy do on the school science trip?", options:["A","B","C","D"], correct:"B"},
+  {id:2, ex:1, text:"Which activity is the girl looking forward to most?", options:["A","B","C","D"], correct:"A"},
+  {id:3, ex:1, text:"Where is the guide taking the tour group next?", options:["A","B","C","D"], correct:"D"},
+  {id:4, ex:1, text:"How did the girl find out about the concert?", options:["A","B","C","D"], correct:"D"},
+  {id:5, ex:1, text:"Where does the girl think her school folder is now?", options:["A","B","C","D"], correct:"C"},
+  {id:6, ex:1, text:"What does the park look like now?", options:["A","B","C","D"], correct:"A"},
+  {id:7, ex:1, text:"How do the two friends decide to get to the train station?", options:["A","B","C","D"], correct:"B"},
+  {id:8, ex:1, text:"Which design has been chosen for the new school logo?", options:["A","B","C","D"], correct:"D"},
 
   // Exercise 2 — Five short recordings, A/B/C text options
-  // Answers from mark scheme: 9B 10C 11A 12C 13A 14B 15B 16A 17C 18B
-  // Recording 1: Two students talking about a class trip to an art gallery
-  {id:9,  ex:2, text:"How did the girl feel about the trip?",
-    options:["Disappointed by the activities","Confused by some of the artwork","Surprised by what the guide said"], correct:"B"},
-  {id:10, ex:2, text:"What does the boy suggest for the next trip?",
-    options:["Students should select the destination","The trip should be fun rather than educational","An overnight stay should be included"], correct:"C"},
+  // Answers from mark scheme: 9C 10C 11A 12C 13C 14A 15C 16B 17B 18C
+  // Recording 1: Two friends talking about a new shop in their town
+  {id:9,  ex:2, text:"Where is the new shop?",
+    options:["It's on a busy street","It's in a new building","It's at one end of a bridge"], correct:"C"},
+  {id:10, ex:2, text:"What does the boy say about the clothes in the shop?",
+    options:["There was a discount on some items","A new range of items was on display","Some items were unavailable"], correct:"C"},
 
-  // Recording 2: A woman leaving a message for a friend about a concert
-  {id:11, ex:2, text:"Why was the woman unable to get tickets for the concert?",
-    options:["She had to stay late at her workplace","The queue to buy them was very long","There was a technical problem online"], correct:"A"},
-  {id:12, ex:2, text:"What does the woman suggest doing instead of going to the concert?",
-    options:["Having a meal together","Seeing a film at the cinema","Watching some sport"], correct:"C"},
+  // Recording 2: A man talking about a party he is arranging
+  {id:11, ex:2, text:"The party is to celebrate",
+    options:["his parents' wedding anniversary","his father's retirement","his mother's birthday"], correct:"A"},
+  {id:12, ex:2, text:"What is the man still worried about?",
+    options:["the number of guests","the place he has booked","the catering arrangements"], correct:"C"},
 
-  // Recording 3: A boy telling a friend about his new guitar
-  {id:13, ex:2, text:"How much did the boy's guitar cost?",
-    options:["£116","£125","£149"], correct:"A"},
-  {id:14, ex:2, text:"What problem has the boy discovered with the guitar?",
-    options:["The sound isn't as good as he thought","It's quite difficult for him to play","Part of the guitar is damaged"], correct:"B"},
+  // Recording 3: Two friends talking about going to university
+  {id:13, ex:2, text:"What is the boy's main aim in going to university?",
+    options:["to gain independence","to complete his education","to enable him to get a good job"], correct:"C"},
+  {id:14, ex:2, text:"How do the friends both feel about moving away from home?",
+    options:["determined to learn new skills","keen to get to know a new area","excited about making new friends"], correct:"A"},
 
-  // Recording 4: Introduction to a TV programme
-  {id:15, ex:2, text:"Where is the programme being broadcast from?",
-    options:["A café","A shop","A railway station"], correct:"B"},
-  {id:16, ex:2, text:"The first guest on the programme is",
-    options:["a celebrity","a researcher","a businesswoman"], correct:"A"},
+  // Recording 4: A teacher making some announcements
+  {id:15, ex:2, text:"Why does the teacher mention the school uniform to her students?",
+    options:["to remind them of the rules","to inform them about a change","to encourage them to complete a survey"], correct:"C"},
+  {id:16, ex:2, text:"What information does the teacher give about the writing competition?",
+    options:["when the deadline is","what the prize will be","who all the judges are"], correct:"B"},
 
-  // Recording 5: A girl telling a friend about some homework
-  {id:17, ex:2, text:"What is the girl's homework about?",
-    options:["Encouraging people to recycle more","Removing rubbish from the oceans","Creating environmentally friendly materials"], correct:"C"},
-  {id:18, ex:2, text:"The friend advises the girl to",
-    options:["Ask for help from her teacher","Use a particular website he knows","Contact classmates for guidance"], correct:"B"},
+  // Recording 5: Two friends talking about cars
+  {id:17, ex:2, text:"The man decided to sell his car because",
+    options:["he needed to save money","he realised he didn't need it anymore","he wanted to be more environmentally friendly"], correct:"B"},
+  {id:18, ex:2, text:"What does the woman say about her local car-sharing club?",
+    options:["Anyone is able to join","You need to plan ahead","Joining it was simple"], correct:"C"},
 
-  // Exercise 3 — Katy Grantham's talk about penguins, A/B/C options
-  // Answers from mark scheme: 19B 20A 21C 22B 23C 24B 25A 26B
-  {id:19, ex:3, text:"Katy says there are currently … known species of penguins.",
-    options:["17","18","25"], correct:"B"},
-  {id:20, ex:3, text:"Katy thinks the name 'penguin' most probably means …",
-    options:["fat bird","white head","cannot fly"], correct:"A"},
-  {id:21, ex:3, text:"… can be used to identify the Adélie penguins that Katy studies.",
-    options:["A dark stripe over the chest","A black line across the chin","A white ring around the eye"], correct:"C"},
-  {id:22, ex:3, text:"Katy says that adult Adélie penguins put on lots of weight just before …",
-    options:["the colder weather returns in winter","they lose most of their feathers","their baby emerges from the egg"], correct:"B"},
-  {id:23, ex:3, text:"Katy says penguins which … are generally the most successful at raising their young.",
-    options:["swim the fastest","have the most experience","dive the deepest"], correct:"C"},
-  {id:24, ex:3, text:"Katy uses technology similar to … to recognise individual penguins.",
-    options:["traffic cameras","supermarket checkouts","aircraft control systems"], correct:"B"},
-  {id:25, ex:3, text:"Katy says the average length of a trip to catch food is … hours during the summer.",
-    options:["48","60","72"], correct:"A"},
-  {id:26, ex:3, text:"The main aim of Katy's research project is to discover …",
-    options:["how climate change affects penguins","how varied the penguins' diet is","how numbers of penguins are changing"], correct:"B"},
+  // Exercise 3 — Freddy's talk about the Wales Coast Path, A/B/C options
+  // Answers from mark scheme: 19C 20A 21C 22A 23B 24A 25B 26B
+  {id:19, ex:3, text:"The path is special because it …",
+    options:["goes all the way round the country","is the only long-distance track in the country","follows the country's entire shoreline"], correct:"C"},
+  {id:20, ex:3, text:"It took … days for the first person to complete the path.",
+    options:["41","71","82"], correct:"A"},
+  {id:21, ex:3, text:"Freddy stayed in … when he walked part of the path last summer.",
+    options:["hotels","campsites","people's houses"], correct:"C"},
+  {id:22, ex:3, text:"Freddy expected the path to be … when he initially heard about it.",
+    options:["flat","straight","narrow"], correct:"A"},
+  {id:23, ex:3, text:"Freddy felt … after walking for a week.",
+    options:["proud","inspired","relieved"], correct:"B"},
+  {id:24, ex:3, text:"The most useful advice Freddy was given was about the …",
+    options:["sea","cliffs","weather"], correct:"A"},
+  {id:25, ex:3, text:"Freddy used the Wales Coast Path app to …",
+    options:["identify wildlife he saw","learn about local history","record his daily progress"], correct:"B"},
+  {id:26, ex:3, text:"Red signposts show …",
+    options:["places that can be dangerous","alternative routes to follow","where the path is closed"], correct:"B"},
 
-  // Exercise 4 — Six speakers, matching A–H
-  // Answers from mark scheme: 27H 28E 29B 30G 31A 32F
-  {id:27, ex:4, text:"Speaker 1", options:["A","B","C","D","E","F","G","H"], correct:"H"},
-  {id:28, ex:4, text:"Speaker 2", options:["A","B","C","D","E","F","G","H"], correct:"E"},
-  {id:29, ex:4, text:"Speaker 3", options:["A","B","C","D","E","F","G","H"], correct:"B"},
-  {id:30, ex:4, text:"Speaker 4", options:["A","B","C","D","E","F","G","H"], correct:"G"},
-  {id:31, ex:4, text:"Speaker 5", options:["A","B","C","D","E","F","G","H"], correct:"A"},
-  {id:32, ex:4, text:"Speaker 6", options:["A","B","C","D","E","F","G","H"], correct:"F"},
+  // Exercise 4 — Six speakers talking about being a volunteer, matching A–H
+  // Answers from mark scheme: 27B 28D 29A 30F 31H 32E
+  {id:27, ex:4, text:"Speaker 1", options:["A","B","C","D","E","F","G","H"], correct:"B"},
+  {id:28, ex:4, text:"Speaker 2", options:["A","B","C","D","E","F","G","H"], correct:"D"},
+  {id:29, ex:4, text:"Speaker 3", options:["A","B","C","D","E","F","G","H"], correct:"A"},
+  {id:30, ex:4, text:"Speaker 4", options:["A","B","C","D","E","F","G","H"], correct:"F"},
+  {id:31, ex:4, text:"Speaker 5", options:["A","B","C","D","E","F","G","H"], correct:"H"},
+  {id:32, ex:4, text:"Speaker 6", options:["A","B","C","D","E","F","G","H"], correct:"E"},
 
-  // Exercise 5 — Interview with Theo Horsfield, cake maker, A/B/C options
-  // Answers from mark scheme: 33A 34C 35B 36C 37A 38A 39C 40B
-  {id:33, ex:5, text:"Theo became interested in making cakes as a result of",
-    options:["making one at a local business","seeing one being made on TV","helping a family member make one"], correct:"A"},
-  {id:34, ex:5, text:"Theo says that his first boss was",
-    options:["unfamiliar with products from other countries","uninterested in generating greater profits","unwilling to introduce new products"], correct:"C"},
-  {id:35, ex:5, text:"Theo decided to open his own cake-making business after",
-    options:["seeing the perfect location for it","chatting with a financial advisor","having a bad experience at work"], correct:"B"},
-  {id:36, ex:5, text:"Theo says the most difficult aspect of running a business is",
-    options:["keeping up to date with paperwork","dealing with difficult customers","finding suitably skilled workers"], correct:"C"},
-  {id:37, ex:5, text:"How did Theo feel during the Cake of the Year competition?",
-    options:["anxious about whether he'd finish in time","concerned about the quality of the ingredients","nervous about how many people were watching"], correct:"A"},
-  {id:38, ex:5, text:"What did the judges particularly like about Theo's prize-winning cake?",
-    options:["how well it was decorated","how original the recipe was","how perfectly it had been baked"], correct:"A"},
-  {id:39, ex:5, text:"What plan has Theo already started working on?",
-    options:["selling products in supermarkets","creating things other than cakes","going into partnership with someone"], correct:"C"},
-  {id:40, ex:5, text:"What advice does Theo give to beginner cakemakers?",
-    options:["use your own ideas from the beginning","attend courses to develop your skills","learn to create a range of foods first"], correct:"B"},
+  // Exercise 5 — Interview with Nadia Long, diving instructor, A/B/C options
+  // Answers from mark scheme: 33A 34C 35B 36C 37B 38A 39B 40B
+  {id:33, ex:5, text:"What made Nadia decide to become a professional diver?",
+    options:["a TV documentary","a letter from a relative","an article in a magazine"], correct:"A"},
+  {id:34, ex:5, text:"When Nadia did her first dive in the sea, she was aware of",
+    options:["the poor weather conditions","the number of people in the group","the weight of the equipment"], correct:"C"},
+  {id:35, ex:5, text:"Nadia avoided paying a lot for her first qualification by",
+    options:["borrowing some of the things that she needed","doing part-time work at the diving centre","choosing her course carefully"], correct:"B"},
+  {id:36, ex:5, text:"Nadia says that the hardest thing about becoming a 'dive master' was",
+    options:["doing the required number of dives","completing the first-aid training","learning all the theory"], correct:"C"},
+  {id:37, ex:5, text:"What does Nadia like most about taking someone on their first dive?",
+    options:["listening to them talk about it later","seeing the look on their face afterwards","realising that they have gained confidence"], correct:"B"},
+  {id:38, ex:5, text:"What does Nadia say about the diving centre she runs now?",
+    options:["She was given the opportunity to take it over","She set it up with a group of friends","She had known the owners for a long time"], correct:"A"},
+  {id:39, ex:5, text:"At her diving centre, Nadia spends most of her time",
+    options:["teaching","writing a blog","advertising the courses"], correct:"B"},
+  {id:40, ex:5, text:"When asked about her most memorable dive, Nadia describes",
+    options:["an unusual location","an unexpected sight","an unfamiliar species"], correct:"B"},
 ];
 
 const matchingOptions = {
-  "A":"Someone I knew was already doing the course.",
-  "B":"I knew I'd be guaranteed a job at the end of it.",
-  "C":"It was a subject I'd loved for a long time.",
-  "D":"I wanted to maintain a family tradition.",
-  "E":"I knew it would give me opportunities to travel.",
-  "F":"I was sure it would lead to a financially rewarding career.",
-  "G":"It provided lots of work experience opportunities.",
-  "H":"I really wasn't sure what else to do."
+  "A":"Being part of a team is what I particularly enjoy.",
+  "B":"It's great when I realise that what I've done is appreciated.",
+  "C":"It has helped me to decide what sort of career I'd like to do in the future.",
+  "D":"I get more satisfaction from it than I do from my job.",
+  "E":"It is a good way of getting work experience.",
+  "F":"It has given me the chance to get to know new people.",
+  "G":"I've got so much fitter since I started doing this.",
+  "H":"I'm glad it allows me to spend more time outdoors."
 };
 
 const exNames = {
   1:"Exercise 1 — You will hear eight short recordings. For each question, choose the correct answer, A, B, C or D.",
   2:"Exercise 2 — You will hear five short recordings. For each question, choose the correct answer, A, B or C.",
-  3:"Exercise 3 — You will hear a biologist called Katy Grantham giving a talk about penguins. For each question, choose the correct answer, A, B or C.",
-  4:"Exercise 4 — You will hear six people talking about the reasons why they chose their university degree courses. Choose from the list (A–H) which idea each speaker expresses. Use each letter only once.",
-  5:"Exercise 5 — You will hear an interview with a professional cake maker called Theo Horsfield. For each question, choose the correct answer, A, B or C."
+  3:"Exercise 3 — You will hear a student called Freddy giving a talk about a walking route in Wales. For each question, choose the correct answer, A, B or C.",
+  4:"Exercise 4 — You will hear six people talking about being a volunteer. Choose from the list (A–H) which idea each speaker expresses. Use each letter only once.",
+  5:"Exercise 5 — You will hear an interview with a diving instructor called Nadia Long. For each question, choose the correct answer, A, B or C."
 };
 
 const exNamesShort = {
   1:"Exercise 1 — Pictures",
   2:"Exercise 2 — Conversations",
-  3:"Exercise 3 — Penguins Talk",
+  3:"Exercise 3 — Wales Coast Path",
   4:"Exercise 4 — Matching",
-  5:"Exercise 5 — Cake Maker Interview"
+  5:"Exercise 5 — Diving Instructor Interview"
 };
+
 let userAnswers = {};
 let examFinished = false;
 let timeLeft = 55 * 60;
@@ -1699,7 +1701,7 @@ async function sendToSheet(total, grade, exM) {
   const payload = {
     studentName: studentName,
     studentClass: studentClass,
-    examTitle: 'Oct/Nov 2024 Paper 21',
+    examTitle: 'Oct/Nov 2024 Paper 22',
     dateTime: dateTime,
     totalScore: `${total}/40`,
     percentage: `${Math.round(total / 40 * 100)}%`,
